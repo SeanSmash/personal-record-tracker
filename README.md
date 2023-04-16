@@ -6,8 +6,10 @@ Purpose: This application allows users to record and track fitness personal reco
 
 1. Fork and clone this repository to a directory of your choosing.
 2. Open a terminal window and navigate to the directory you used in step 1.
-3. Navigate to the backend directory and then run "bundle install". Then run "rake server". This will start the backend server.
-4. Open a second terminal and navigate to the frontend directory and run "npm install". Then run "npm start". This will start the application in your browser. You can now interact with the application.
+3. Navigate to the backend directory and then run "bundle install". 
+4. Next, run "bundle exec rake db:reset". This will populate the database with sample data.
+5. Then run "bundle exec rake server". This will start the backend server.
+6. Open a second terminal and navigate to the frontend directory and run "npm install". Then run "npm start". This will start the application in your browser. You can now interact with the application.
 
 ### Interacting with the Applicaton
 

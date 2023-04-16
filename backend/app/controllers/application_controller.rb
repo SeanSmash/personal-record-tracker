@@ -106,4 +106,19 @@ class ApplicationController < Sinatra::Base
     personal_record.to_json
   end
 
+  patch '/personal_records/:id' do
+    personal_record = PersonalRecord.find(params[:id])
+    personal_record.update(
+      metric: params[:metric],
+      date_created: params[:date_created]
+    )
+    personal_record.to_json
+  end
+
+  delete '/personal_records/:id' do
+    personal_record = PersonalRecord.find(params[:id])
+    personal_record.destroy
+    personal_record.to_json
+  end
+
 end

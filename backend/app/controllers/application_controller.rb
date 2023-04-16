@@ -84,4 +84,14 @@ class ApplicationController < Sinatra::Base
     userRecords = user.personal_records.order(date_created: :desc).to_json
   end
 
+  post '/personal_records' do
+    personal_record = PersonalRecord.create(
+      user_profile_id: params[:user_profile_id],
+      exercise_id: params[:exercise_id],
+      metric: params[:metric],
+      date_created: params[:date_created]
+    )
+    personal_record.to_json
+  end
+
 end

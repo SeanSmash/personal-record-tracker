@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_16_192357) do
+ActiveRecord::Schema.define(version: 2023_04_16_194622) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2023_04_16_192357) do
     t.string "user_name"
     t.string "first_name"
     t.string "last_name"
-    t.string "birthdate"
+    t.datetime "birthdate"
     t.string "gender"
   end
 

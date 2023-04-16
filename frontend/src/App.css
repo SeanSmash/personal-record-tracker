@@ -1,0 +1,159 @@
+.title {
+    text-align: center;
+  }
+  
+  .login span {
+    padding: 10px;
+  }
+  
+  .subtitle {
+    font-size: 16pt;
+    font-weight: bold;
+    padding-right: 10px;
+  }
+  
+  table {
+    border: 2px solid forestgreen;
+    width: 800px;
+    height: 200px;
+  }
+    
+  th {
+    border-bottom: 1px solid black;
+    text-align: left;
+  }
+    
+  td {
+    text-align: left;
+  }
+  
+  .record-edit {
+    border: 2px solid black;
+    background-color: darkgrey;
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+    line-height:20pt;
+    text-align: center;
+  }
+  
+  .record-add {
+    border: 2px solid black;
+    background-color: darkgrey;
+    width: 500px;
+    height: 300px;
+    padding: 10px;
+    line-height:20pt;
+    text-align: left;
+  }
+  
+  .record-add-form {
+    text-align: left;
+  }
+  
+  #record-add-form-details input {
+    position: absolute;
+    left: 80px;
+  }
+  
+  #record-add-form-details span {
+    position: absolute;
+    left: 230px;
+  }
+  
+  .record-add-form-details-time input {
+    position: absolute;
+    left: 80px;
+  }
+  
+  #record-add-form-date {
+    position: absolute;
+    top: 125px;
+    padding-top: 7px;
+  }
+  
+  #minutes-span {
+    position: absolute;
+    left: 230px;
+  }
+  
+  #seconds-input {
+    position: absolute;
+    left: 290px;
+  }
+  
+  #seconds-span {
+    position: absolute;
+    left: 440px
+  }
+  
+  #form-clear {
+    position: absolute;
+    left: 450px;
+    bottom: 260px;
+  }
+  
+  #form-submit {
+    position: relative;
+    left: 250px;
+  }
+  
+  .filter-form {
+    width: 780px;
+    padding: 10px;
+    background-color: lightgray;
+    margin-top: 10px;
+  }
+  
+  .filter-form label {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  
+  .category-add {
+    border: 1px solid black;
+    background-color: gray;
+    padding: 1px;
+    margin: 2px;
+  }
+  
+  .exercise-add-form {
+    border: 2px solid black;
+    background-color: tan;
+    width: 500px;
+    height: 300px;
+    padding: 10px;
+    line-height:20pt;
+    text-align: left;
+  }
+  
+  #add-exercise-btn {
+    margin-left: 10px;
+  }
+  
+  .user-form {
+    line-height:20pt;
+  }
+  
+  #user-form-submit {
+    position: relative;
+    margin-left: 0px;
+  }
+  
+  .user-form input {
+    margin-left: 10px;
+  }
+  
+  .user-form select {
+    margin-left: 30px;
+  }
+  
+  #cancel-btn {
+    position: relative;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .navlink {
+    margin-left: 10px;
+  }

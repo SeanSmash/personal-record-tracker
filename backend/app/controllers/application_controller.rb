@@ -23,4 +23,14 @@ class ApplicationController < Sinatra::Base
     exercise.categories.all.to_json
   end
 
+  get "/categories" do
+    categories = Category.all
+    categories.order(category: :asc).to_json
+  end
+
+  get "/exercise_categories" do
+    exercise_categories = ExerciseCategory.all
+    exercise_categories.to_json
+  end
+
 end

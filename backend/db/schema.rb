@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_16_191424) do
+ActiveRecord::Schema.define(version: 2023_04_16_192150) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2023_04_16_191424) do
     t.integer "user_profile_id"
     t.integer "exercise_id"
     t.string "metric"
-    t.date "date_created"
+    t.datetime "date_created"
   end
 
   create_table "user_profiles", force: :cascade do |t|

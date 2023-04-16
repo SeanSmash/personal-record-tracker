@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_16_190732) do
+ActiveRecord::Schema.define(version: 2023_04_16_191424) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category"
+  end
+
+  create_table "exercise_categories", force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "exercise_id"
   end
 
   create_table "exercises", force: :cascade do |t|
@@ -21,6 +26,21 @@ ActiveRecord::Schema.define(version: 2023_04_16_190732) do
     t.boolean "for_reps"
     t.boolean "for_time"
     t.boolean "for_weight"
+  end
+
+  create_table "personal_records", force: :cascade do |t|
+    t.integer "user_profile_id"
+    t.integer "exercise_id"
+    t.string "metric"
+    t.date "date_created"
+  end
+
+  create_table "user_profiles", force: :cascade do |t|
+    t.string "user_name"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "birthdate"
+    t.string "gender"
   end
 
 end

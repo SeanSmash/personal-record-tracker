@@ -49,7 +49,7 @@ class ApplicationController < Sinatra::Base
     exercise_categories = ExerciseCategory.all
     exercise_categories.to_json
   end
-
+  
   post '/exercise_categories' do
     exercise_category = ExerciseCategory.create(
       category_id: params[:category_id],

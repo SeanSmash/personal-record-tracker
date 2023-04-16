@@ -13,6 +13,16 @@ class ApplicationController < Sinatra::Base
     exercises.to_json
   end
 
+  post '/exercises' do
+    exercise = Exercise.create(
+      exercise: params[:exercise],
+      for_reps: params[:for_reps],
+      for_time: params[:for_time],
+      for_weight: params[:for_weight]
+    )
+    exercise.to_json
+  end
+
   get "/exercises/:id" do
     exercise = Exercise.find(params[:id])
     exercise.to_json
@@ -26,6 +36,13 @@ class ApplicationController < Sinatra::Base
   get "/categories" do
     categories = Category.all
     categories.order(category: :asc).to_json
+  end
+
+  post "/categories" do
+    category = Category.create(
+      category: params[:category]
+    )
+    category.to_json
   end
 
   get "/exercise_categories" do

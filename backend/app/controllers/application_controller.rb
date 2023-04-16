@@ -50,6 +50,14 @@ class ApplicationController < Sinatra::Base
     exercise_categories.to_json
   end
 
+  post '/exercise_categories' do
+    exercise_category = ExerciseCategory.create(
+      category_id: params[:category_id],
+      exercise_id: params[:exercise_id]
+    )
+    exercise_category.to_json
+  end
+
   get "/user_profiles/:id" do
     user = UserProfile.find(params[:id])
     user.to_json
@@ -58,6 +66,17 @@ class ApplicationController < Sinatra::Base
   get "/user_profiles" do
     user_profiles = UserProfile.all
     user_profiles.to_json
+  end
+
+  post "/user_profiles" do
+    new_user = UserProfile.create(
+      user_name: params[:user_name],
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      birthdate: params[:birthdate],
+      gender: params[:gender]
+    )
+    new_user.to_json
   end
 
   get '/personal_records/:id' do
